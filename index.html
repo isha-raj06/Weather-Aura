@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherAura - Smart Weather Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <p class="small-title">WEATHERAURA</p>
+
+            <h1>Your little window to the sky</h1>
+
+            <p class="subtitle">
+                Discover today's weather and plan your day beautifully.
+            </p>
+        </header>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search for a city..."
+                    autocomplete="off"
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+            <button id="locationButton" class="location-button">
+                ◉ Use My Location
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            Looking at the sky...
+        </div>
+
+
+        <!-- Main Weather -->
+        <main id="weatherContainer">
+
+            <section class="main-weather-card">
+
+                <div class="weather-top">
+
+                    <div class="location-info">
+
+                        <p class="label">CURRENT WEATHER</p>
+
+                        <h2 id="cityName">
+                            New Delhi
+                        </h2>
+
+                        <p id="countryName">
+                            India
+                        </p>
+
+                        <p id="date">
+                            Today
+                        </p>
+
+                    </div>
+
+                    <div class="weather-symbol" id="weatherIcon">
+                        ☀️
+                    </div>
+
+                </div>
+
+
+                <div class="temperature-area">
+
+                    <div>
+                        <span id="temperature">31</span>
+                        <span class="degree">°C</span>
+                    </div>
+
+                    <div class="weather-description">
+
+                        <h3 id="weatherDescription">
+                            Sunny
+                        </h3>
+
+                        <p>
+                            Feels like
+                            <strong id="feelsLike">33°C</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Weather Details -->
+                <div class="details-grid">
+
+                    <div class="detail-card">
+                        <div class="detail-icon">💧</div>
+                        <p>Humidity</p>
+                        <strong id="humidity">48%</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">💨</div>
+                        <p>Wind</p>
+                        <strong id="windSpeed">12 km/h</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">☀️</div>
+                        <p>UV Index</p>
+                        <strong id="uvIndex">7</strong>
+                        <small id="uvLevel">High</small>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">👁️</div>
+                        <p>Visibility</p>
+                        <strong id="visibility">10 km</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Weather Advice -->
+            <section class="outlook-card">
+
+                <div class="outlook-icon" id="outlookIcon">
+                    ☀️
+                </div>
+
+                <div>
+
+                    <p class="label">
+                        TODAY'S OUTLOOK
+                    </p>
+
+                    <h2 id="outlookTitle">
+                        Sunny skies ahead
+                    </h2>
+
+                    <p id="outlookText">
+                        Don't forget to add sunscreen to your routine
+                        before heading out.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sun Information -->
+            <section class="sun-section">
+
+                <div class="sun-card">
+
+                    <span class="sun-card-icon">
+                        🌅
+                    </span>
+
+                    <div>
+                        <p>Sunrise</p>
+                        <strong id="sunrise">
+                            5:45 AM
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="sun-card">
+
+                    <span class="sun-card-icon">
+                        🌇
+                    </span>
+
+                    <div>
+                        <p>Sunset</p>
+                        <strong id="sunset">
+                            6:52 PM
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Forecast -->
+            <section class="forecast-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="label">
+                            FORECAST
+                        </p>
+
+                        <h2>
+                            The Week Ahead
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="forecastContainer"
+                    class="forecast-container"
+                >
+
+                    <!-- Forecast cards will be generated by JavaScript -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                WeatherAura - Smart Weather Forecast
+            </p>
+
+            <span>
+                Designed & developed by Isha Raj
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
