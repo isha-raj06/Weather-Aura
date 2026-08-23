@@ -15,3 +15,8 @@ Weather Aura — a modern, responsive weather application that delivers real-tim
 - CSS
 - JavaScript
 - Weather API
+API Used
+I used the Open-Meteo API to get weather data.
+
+Live Project
+👉 https://isha-raj06.github.io/Weather-Aura/
