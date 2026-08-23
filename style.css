@@ -1,0 +1,1059 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: #5b4c62;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 190, 216, 0.65),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(205, 191, 255, 0.65),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 220, 235, 0.45),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #f7f2ff 50%,
+            #fff8f4
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   DECORATIVE BACKGROUND
+======================================== */
+
+.background-shape {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(2px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+.shape-one {
+    width: 220px;
+    height: 220px;
+
+    background: rgba(255, 181, 211, 0.25);
+
+    top: 25%;
+    left: -100px;
+}
+
+
+.shape-two {
+    width: 300px;
+    height: 300px;
+
+    background: rgba(190, 173, 255, 0.22);
+
+    bottom: -130px;
+    right: -100px;
+}
+
+
+/* ========================================
+   APP
+======================================== */
+
+.app {
+    width: 92%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 50px 0 30px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+
+/* WeatherAura brand */
+
+.small-title {
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #c47fa3;
+
+    margin-bottom: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.label {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #c57ca0;
+}
+
+
+/* Main heading */
+
+.header h1 {
+    margin-top: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 6vw, 64px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    color: #6d5576;
+}
+
+
+.subtitle {
+    margin-top: 13px;
+
+    font-size: 15px;
+
+    color: #9d8da3;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-section {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    width: min(650px, 100%);
+
+    margin: auto;
+
+    padding: 7px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 15px 40px rgba(139, 107, 139, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    transition: 0.3s ease;
+}
+
+
+.search-box:focus-within {
+    box-shadow:
+        0 18px 45px rgba(193, 130, 174, 0.18);
+
+    transform: translateY(-1px);
+}
+
+
+.search-icon {
+    padding-left: 18px;
+
+    font-size: 27px;
+
+    color: #bd8ca8;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #5b4c62;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+.search-box input::placeholder {
+    color: #b7a8b8;
+}
+
+
+/* Search button */
+
+.search-box button {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e79ab9,
+            #aa91dc
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.search-box button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(193, 130, 174, 0.3);
+}
+
+
+.search-box button:active {
+    transform: translateY(0);
+}
+
+
+/* Location button */
+
+.location-button {
+    margin-top: 13px;
+
+    padding: 8px 18px;
+
+    border: 1px solid #ead8e5;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #9b718e;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.location-button:hover {
+    background: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(150, 113, 145, 0.08);
+}
+
+
+/* Error */
+
+#errorMessage {
+    min-height: 22px;
+
+    margin-top: 10px;
+
+    color: #c66d85;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.loading {
+    display: none;
+
+    text-align: center;
+
+    margin: 25px;
+
+    color: #9b7b9d;
+
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+/* ========================================
+   MAIN WEATHER CARD
+======================================== */
+
+.main-weather-card {
+    padding: 38px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.82),
+            rgba(255,240,248,0.65)
+        );
+
+    border: 1px solid rgba(255,255,255,0.95);
+
+    box-shadow:
+        0 25px 60px rgba(125, 92, 128, 0.12);
+
+    backdrop-filter: blur(20px);
+
+    transition: 0.3s ease;
+}
+
+
+/* ========================================
+   WEATHER TOP
+======================================== */
+
+.weather-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+
+.location-info h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    color: #65516e;
+}
+
+
+.location-info p:not(.label) {
+    margin-top: 5px;
+
+    color: #9d8da3;
+
+    font-size: 14px;
+}
+
+
+#date {
+    font-size: 13px !important;
+
+    margin-top: 10px !important;
+}
+
+
+.weather-symbol {
+    font-size: 75px;
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(214, 148, 181, 0.25)
+        );
+
+    animation: floatWeather 4s ease-in-out infinite;
+}
+
+
+@keyframes floatWeather {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* ========================================
+   TEMPERATURE
+======================================== */
+
+.temperature-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 25px 0 32px;
+}
+
+
+#temperature {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(75px, 10vw, 105px);
+
+    line-height: 0.9;
+
+    color: #55445d;
+}
+
+
+.degree {
+    font-size: 32px;
+
+    color: #8e7695;
+
+    vertical-align: top;
+}
+
+
+.weather-description h3 {
+    font-size: 22px;
+
+    color: #745c7c;
+}
+
+
+.weather-description p {
+    margin-top: 7px;
+
+    color: #a08da5;
+
+    font-size: 14px;
+}
+
+
+.weather-description strong {
+    color: #765d7c;
+}
+
+
+/* ========================================
+   WEATHER DETAILS
+======================================== */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+
+.detail-card {
+    padding: 19px 10px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,231,242,0.75),
+            rgba(237,230,255,0.75)
+        );
+
+    border: 1px solid rgba(255,255,255,0.9);
+
+    transition: 0.3s ease;
+}
+
+
+.detail-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(155, 119, 151, 0.12);
+}
+
+
+.detail-icon {
+    font-size: 25px;
+}
+
+
+.detail-card p {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #a18fa6;
+}
+
+
+.detail-card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 18px;
+
+    color: #67516f;
+}
+
+
+.detail-card small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #bd7e9f;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   TODAY'S OUTLOOK
+======================================== */
+
+.outlook-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+    padding: 24px 28px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #f1ecff
+        );
+
+    border: 1px solid white;
+
+    box-shadow:
+        0 12px 30px
+        rgba(150, 113, 145, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.outlook-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px
+        rgba(150, 113, 145, 0.12);
+}
+
+
+.outlook-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background: white;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(150, 113, 145, 0.1);
+}
+
+
+.outlook-card h2 {
+    margin: 5px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    color: #6b5573;
+}
+
+
+.outlook-card p:last-child {
+    color: #98869f;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   SUNRISE / SUNSET
+======================================== */
+
+.sun-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.sun-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.7);
+
+    border: 1px solid white;
+
+    transition: 0.3s ease;
+}
+
+
+.sun-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(150,113,145,0.08);
+}
+
+
+.sun-card-icon {
+    font-size: 28px;
+}
+
+
+.sun-card p {
+    color: #a18fa6;
+
+    font-size: 12px;
+}
+
+
+.sun-card strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #6d5875;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   FORECAST
+======================================== */
+
+.forecast-section {
+    margin-top: 38px;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    margin-top: 5px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    color: #6b5573;
+}
+
+
+.forecast-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 13px;
+}
+
+
+.forecast-card {
+    padding: 21px 10px;
+
+    text-align: center;
+
+    border-radius: 23px;
+
+    background: rgba(255,255,255,0.72);
+
+    border: 1px solid rgba(255,255,255,0.95);
+
+    box-shadow:
+        0 10px 25px
+        rgba(150,113,145,0.07);
+
+    transition: 0.3s ease;
+}
+
+
+.forecast-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(150,113,145,0.13);
+}
+
+
+.forecast-day {
+    color: #765c7e;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+.forecast-icon {
+    margin: 13px 0;
+
+    font-size: 37px;
+}
+
+
+.forecast-description {
+    min-height: 30px;
+
+    color: #a08fa5;
+
+    font-size: 11px;
+}
+
+
+.forecast-temperature {
+    margin-top: 10px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.max-temp {
+    color: #6d5574;
+}
+
+
+.min-temp {
+    margin-left: 5px;
+
+    color: #b2a3b4;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 40px;
+
+    text-align: center;
+
+    color: #a18fa6;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+footer p {
+    font-weight: 600;
+
+    color: #9b718e;
+
+    letter-spacing: 0.5px;
+}
+
+
+footer span {
+    color: #c17fa1;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   RESPONSIVE — TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .details-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .forecast-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE — MOBILE
+======================================== */
+
+@media (max-width: 550px) {
+
+    .app {
+        width: 94%;
+
+        padding-top: 30px;
+    }
+
+
+    .small-title {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .header h1 {
+        font-size: 38px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+
+        padding: 0 10px;
+    }
+
+
+    .search-box {
+        padding: 6px;
+    }
+
+
+    .search-box button {
+        padding: 12px 17px;
+    }
+
+
+    .main-weather-card {
+        padding: 25px 18px;
+    }
+
+
+    .weather-symbol {
+        font-size: 55px;
+    }
+
+
+    .location-info h2 {
+        font-size: 28px;
+    }
+
+
+    .temperature-area {
+        gap: 15px;
+    }
+
+
+    #temperature {
+        font-size: 70px;
+    }
+
+
+    .degree {
+        font-size: 22px;
+    }
+
+
+    .weather-description h3 {
+        font-size: 18px;
+    }
+
+
+    .details-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .outlook-card {
+        padding: 20px;
+
+        align-items: flex-start;
+    }
+
+
+    .outlook-card h2 {
+        font-size: 21px;
+    }
+
+
+    .sun-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .forecast-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE — SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+    .search-box {
+        flex-wrap: wrap;
+
+        border-radius: 20px;
+    }
+
+
+    .search-icon {
+        display: none;
+    }
+
+
+    .search-box input {
+        width: 100%;
+    }
+
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    #temperature {
+        font-size: 60px;
+    }
+
+
+    .weather-symbol {
+        font-size: 48px;
+    }
+
+
+    .outlook-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 25px;
+    }
+
+}
